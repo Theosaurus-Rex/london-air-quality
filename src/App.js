@@ -1,13 +1,34 @@
 
-// import './App.css';
+import './App.css';
 
-import CurrentForecast from "./components/CurrentForecast";
 import ForecastText from "./components/ForecastText";
 
 function App() {
   return (
     <div className="App">
-      <ForecastText/>
+      <div className="content">
+        <ForecastText/>
+      </div>
+      <ul class="cb-slideshow">
+	        <li>
+		        <span>Image 01</span>
+	        </li>
+	        <li>
+            <span>Image 02</span>
+          </li>
+	        <li>
+            <span>Image 03</span>
+          </li>
+          <li>
+            <span>Image 04</span>
+          </li>
+          <li>
+            <span>Image 05</span>
+          </li>
+          <li>
+            <span>Image 06</span>
+          </li>
+      </ul>
     </div>
   );
 }
