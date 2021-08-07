@@ -1,9 +1,9 @@
 import React from 'react'
-import GetWeather from '../config/GetWeather'
+import GetCurrentWeather from '../config/GetCurrentWeather'
 
 const CurrentForecast = () => {
     
-    return <GetWeather />
+    return <GetCurrentWeather  />
 }
 
 export default CurrentForecast
