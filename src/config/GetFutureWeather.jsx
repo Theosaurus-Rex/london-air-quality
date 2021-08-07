@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 import {decode} from 'html-entities'
 import reactStringReplace from 'react-string-replace'
+import { Puff } from 'svg-loaders-react'
 
 
 
@@ -27,7 +28,7 @@ const GetFutureWeather = (props) => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Puff stroke="#000000"/>;
     } else {
       const decodedWeather = decode(weather.forecastText)
       const futureWeather = reactStringReplace(decodedWeather, '<br/>', (match, i) => (
