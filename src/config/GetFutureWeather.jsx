@@ -22,7 +22,7 @@ const GetFutureWeather = (props) => {
         .finally(
           setIsLoaded(true),
           setWeather(decode(weather)))
-    }, [])
+    }, [weather])
   
     if (error) {
       return <div>Error: {error.message}</div>;
