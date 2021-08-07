@@ -6,8 +6,9 @@ import ForecastText from "./components/ForecastText";
 function App() {
   return (
     <div className="App">
-      
-      <ForecastText/>
+      <div className="content">
+        <ForecastText/>
+      </div>
       <ul class="cb-slideshow">
 	        <li>
 		        <span>Image 01</span>
