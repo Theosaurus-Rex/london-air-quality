@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import {decode} from 'html-entities'
+import reactStringReplace from 'react-string-replace'
 
 
 
@@ -12,7 +13,7 @@ const GetWeather = () => {
     useEffect(() => {
       axios("https://api.tfl.gov.uk/AirQuality/")
         .then(
-          res => setWeather(decode(res.data.currentForecast[0].forecastText))
+          res => setWeather(decode(res.data.currentForecast[0]))
         )
         .catch((error) => {
           setIsLoaded(true);
@@ -28,8 +29,12 @@ const GetWeather = () => {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+      const decodedWeather = decode(weather.forecastText)
+      const currentWeather = reactStringReplace(decodedWeather, '<br/>', (match, i) => (
+        <br/>
+      ))
       return (
-        <p>{weather}</p>
+        <p>{currentWeather}</p>
       );
     }
   }
