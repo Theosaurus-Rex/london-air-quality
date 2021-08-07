@@ -5,7 +5,7 @@ import reactStringReplace from 'react-string-replace'
 
 
 
-const GetWeather = () => {
+const GetCurrentWeather = (props) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [weather, setWeather] = useState([]);
@@ -39,4 +39,4 @@ const GetWeather = () => {
     }
   }
 
-  export default GetWeather
+  export default GetCurrentWeather
