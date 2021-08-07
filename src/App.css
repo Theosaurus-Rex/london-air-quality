@@ -3,7 +3,6 @@
 
 * {
   margin: 0;
-  
 }
 
 h1 {
@@ -23,7 +22,24 @@ p {
 button {
   font-family: 'Work Sans', sans-serif;
   font-size: 120%;
+  text-align: center;
+  border: 1px transparent;
+  box-shadow: #737475 4px 4px 4px;
+  padding: 5px 10px 5px 10px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  background: linear-gradient(-45deg, #184963, #3D5A7F, #656997, #9078A9);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
 }
+
+/* Change the background position to look like it's changing color slowly */
+ @keyframes anime {
+   0% {background-position: 0% 50%;}
+   50%{background-position: 100% 50%;}
+   100%{background-position: 0% 50%;}
+ }
+
 
 .content {
   display: flex;
@@ -57,23 +73,6 @@ button {
 }
 
 
-.cb-slideshow li div { 
-  z-index: 1000;
-  position: absolute;
-  bottom: 30px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  animation: titleAnimation 36s linear infinite 0s; 
-}
-.cb-slideshow li div h3 { 
-  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-  font-size: 240px;
-  padding: 0;
-  line-height: 200px; 
-}
 
 /* Start with opacity 0 to change on animation */
 .cb-slideshow li span { 
@@ -114,22 +113,6 @@ button {
 }
 .cb-slideshow li:nth-child(6) span { 
   background-image: url(../src/images/6.jpeg);
-  animation-delay: 30s; 
-}
-
-.cb-slideshow li:nth-child(2) div { 
-  animation-delay: 6s; 
-}
-.cb-slideshow li:nth-child(3) div { 
-  animation-delay: 12s; 
-}
-.cb-slideshow li:nth-child(4) div { 
-  animation-delay: 18s; 
-}
-.cb-slideshow li:nth-child(5) div { 
-  animation-delay: 24s; 
-}
-.cb-slideshow li:nth-child(6) div { 
   animation-delay: 30s; 
 }
 
