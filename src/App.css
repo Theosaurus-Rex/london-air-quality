@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Work+Sans:wght@500&display=swap');
+
 
 * {
   margin: 0;
   
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 270%;
+  margin: 15px;
+  padding: 5px;
+}
+
+p {
+  font-family: 'Bitter', serif;
+  font-size: 120%;
+  margin: 15px;
+  padding: 5px;
+}
+
+button {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 120%;
 }
 
 .content {
@@ -11,7 +32,7 @@
   justify-content: center;
   background-color:  rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  margin: 5% 25% 0 25%;
+  margin: 5% 25% 5% 25%;
   padding: 15px;
   width: 50%;
 }
