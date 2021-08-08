@@ -1,7 +1,7 @@
 
 import { useState } from "react";
-import CurrentForecast from "./CurrentForecast";
-import FutureForecast from "./FutureForecast";
+import GetCurrentWeather from "../config/GetCurrentWeather";
+import GetFutureWeather from "../config/GetFutureWeather";
 
 const ForecastText = () => {
     const [currentWeatherView, setCurrentWeatherView] = useState("today")
@@ -21,8 +21,8 @@ const ForecastText = () => {
     return (
         <>  
             <h1>Here is {currentWeatherView}'s forecast:</h1>
-            {currentWeatherView === "today" && <CurrentForecast/>}
-            {currentWeatherView === "tomorrow" && <FutureForecast/>}
+            {currentWeatherView === "today" && <GetCurrentWeather/>}
+            {currentWeatherView === "tomorrow" && <GetFutureWeather/>}
             <button onClick={changeWeather}>What about {oppositeWeatherView}?</button>
         </>
     )
