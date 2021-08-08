@@ -4,9 +4,7 @@ import {decode} from 'html-entities'
 import reactStringReplace from 'react-string-replace'
 import { Puff } from 'svg-loaders-react'
 
-
-
-const GetCurrentWeather = (props) => {
+const GetCurrentWeather = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [weather, setWeather] = useState([]);
@@ -28,16 +26,17 @@ const GetCurrentWeather = (props) => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
+      // If not loaded render the loading icon
       return <Puff stroke="#000000"/>;
     } else {
+      // Decode HTML entities
       const decodedWeather = decode(weather.forecastText)
+      // Replace decoded break tags with actual break tag elements
       const currentWeather = reactStringReplace(decodedWeather, '<br/>', (match, i) => (
         <br/>
       ))
       return (
-        
         <p>{currentWeather}</p>
-        
       );
     }
   }
