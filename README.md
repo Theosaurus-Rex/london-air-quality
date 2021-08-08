@@ -1,5 +1,17 @@
 # UK Air Quality Monitor & Forecast
 
+## Table of Contents
+  * [About](#about)
+  * [Why Air Quality?](#why-air-quality-)
+  * [Tech Stack](#tech-stack)
+  * [Initial Goals](#initial-goals)
+  * [Difficulties and Compromises](#difficulties-and-compromises)
+    + [Difficulty: HTML Entities](#difficulty--html-entities)
+    + [Difficulty: Keeping It DRY](#difficulty--keeping-it-dry)
+    + [Compromise: Background Images](#compromise--background-images)
+  * [Running the Project Locally](#running-the-project-locally)
+  * [Some Final Thoughts & Thanks](#some-final-thoughts---thanks)
+
 ## About
 Air quality is something that affects all of us, every day, regardless of where we live. This web app is built and designed to deliver air quality forecasts from the Transport for London API in an easy to read manner to keep citizens informed. Additionally, it is designed to be enjoyable to view, to keep users coming back and keeping their respitory health and safety in mind.
 
