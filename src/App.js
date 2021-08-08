@@ -9,6 +9,7 @@ function App() {
       <div className="content">
         <ForecastText/>
       </div>
+      {/* Spans for slideshow photos */}
       <ul class="cb-slideshow">
 	        <li>
 		        <span>Image 01</span>

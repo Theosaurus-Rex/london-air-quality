@@ -6,7 +6,7 @@ import { Puff } from 'svg-loaders-react'
 
 
 
-const GetFutureWeather = (props) => {
+const GetFutureWeather = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [weather, setWeather] = useState([]);
@@ -28,9 +28,12 @@ const GetFutureWeather = (props) => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
+      // If not loaded render the loading icon
       return <Puff stroke="#000000"/>;
     } else {
+      // Decode HTML entities
       const decodedWeather = decode(weather.forecastText)
+      // Replace decoded break tags with actual break tag elements
       const futureWeather = reactStringReplace(decodedWeather, '<br/>', (match, i) => (
         <br/>
       ))

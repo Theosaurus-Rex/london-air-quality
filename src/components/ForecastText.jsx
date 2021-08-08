@@ -7,6 +7,8 @@ const ForecastText = () => {
     const [currentWeatherView, setCurrentWeatherView] = useState("today")
     const [oppositeWeatherView, setOppositeWeatherView] = useState("tomorrow")
 
+    // Swap the values of current and opposite weather on click
+    // This will change which info appears on screen and render relevant text to title and button
     const changeWeather = () => {
         if(currentWeatherView === "today"){
             setCurrentWeatherView("tomorrow")

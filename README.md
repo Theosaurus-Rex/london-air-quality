@@ -17,7 +17,7 @@ I do want to emphasise that I feel my React knowledge is still relatively weak c
 
 The application uses Air Quality forecast data from the Transport For London API, which specifically pulls the current forecast (updated hourly) from http://londonair.org.uk/forecast . The api call grabs both the current day's air quality as well as a forecast for the following day, so Londoners can stay prepared.
 
-This app is let up to deploy my main branch in the git repository to [Netlify](https://www.netlify.com/), and the live version of the app can be found [here](https://london-air-monitor.netlify.app/).
+This app is set up to deploy my main branch in the git repository to [Netlify](https://www.netlify.com/), and the live version of the app can be found [here](https://london-air-monitor.netlify.app/).
 
 All of the images used in the styling of this project are royalty-free, sourced from [Unsplash](https://unsplash.com/).
 
